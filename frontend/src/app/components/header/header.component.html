@@ -1,0 +1,15 @@
+<nav class="nav-container">
+    <div class="header">
+        <div class="header-left" (click)="goToHome()">
+            <h1>Restaurantes</h1>
+        </div>
+        <div class="header-right">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="logout()">Sair</button>
+            </mat-menu>
+        </div>
+    </div>
+</nav>

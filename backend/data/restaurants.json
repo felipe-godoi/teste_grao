@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Sabor Mineiro",
+        "category": "Mineira",
+        "phone": "(34) 3332-5678",
+        "address": "Rua Governador Valadares, 456, Centro, Uberaba - MG"
+    },
+    {
+        "id": 2,
+        "name": "Cantinho do Cerrado",
+        "category": "Carnes",
+        "phone": "(34) 3315-9876",
+        "address": "Avenida Leopoldino de Oliveira, 789, Mercês, Uberaba - MG"
+    },
+    {
+        "id": 3,
+        "name": "Tempero Uberabense",
+        "category": "Brasileira",
+        "phone": "(34) 3318-2345",
+        "address": "Rua Vigário Silva, 123, Estados Unidos, Uberaba - MG"
+    },
+    {
+        "id": 4,
+        "name": "Fogão a Lenha",
+        "category": "Carnes",
+        "phone": "(34) 3316-7890",
+        "address": "Avenida Santos Dumont, 987, Boa Vista, Uberaba - MG"
+    },
+    {
+        "id": 5,
+        "name": "Delícias do Triângulo",
+        "category": "Mineira",
+        "phone": "(34) 3314-5432",
+        "address": "Rua Segismundo Mendes, 321, Fabrício, Uberaba - MG"
+    }
+]

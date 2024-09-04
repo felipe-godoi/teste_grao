@@ -1,0 +1,30 @@
+<div class="login-container">
+    <h2>Bem vindo</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" formControlName="email">
+            <div
+                *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">
+                <small class="error" *ngIf="loginForm.get('email')?.errors?.['required']">
+                    O email é obrigatório.
+                </small>
+                <small class="error" *ngIf="loginForm.get('email')?.errors?.['email']">
+                    Insira um email válido.
+                </small>
+            </div>
+        </div>
+        <div>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" formControlName="password">
+            <div
+                *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+                <small class="error" *ngIf="loginForm.get('password')?.errors?.['required']">
+                    A senha é obrigatória.
+                </small>
+            </div>
+        </div>
+        <button type="submit" [disabled]="loginForm.invalid">Login</button>
+        <a href="/register">Não é cadastrado? Criar conta</a>
+    </form>
+</div>

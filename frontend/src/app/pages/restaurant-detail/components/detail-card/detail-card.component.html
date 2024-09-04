@@ -1,0 +1,10 @@
+<div class="card">
+    <img mat-card-image [src]="'assets/menuItem.png'" alt="{{ menuItem().name }}" />
+    <div class="container">
+        <h4><b>{{ menuItem().name }}</b></h4>
+        <p>{{ menuItem().description }}</p>
+    </div>
+    <div class="price">
+        {{ menuItem().price | currency: 'BRL' }}
+    </div>
+</div>

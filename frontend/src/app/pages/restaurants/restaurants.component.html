@@ -1,0 +1,14 @@
+<div class="restaurant-list-container">
+    <form [formGroup]="searchForm">
+        <mat-form-field class="search-bar" appearance="outline">
+            <mat-label>Pesquisar Restaurantes</mat-label>
+            <input matInput formControlName="search" placeholder="Digite o termo de busca" />
+        </mat-form-field>
+    </form>
+
+    <div class="restaurant-cards">
+        @for (restaurant of restaurants(); track restaurant.id) {
+        <app-restaurant-card [restaurant]="restaurant"></app-restaurant-card>
+        }
+    </div>
+</div>

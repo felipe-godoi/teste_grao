@@ -1,0 +1,26 @@
+@if (restaurant ) {
+<div class="restaurant-detail-container">
+    <div class="banner">
+        <img src="assets/restaurant-banner.png" alt="Banner" />
+    </div>
+
+    <div class="restaurant-header">
+        <img src="assets/restaurant.png" alt="Restaurant" />
+        <div class="restaurant-container">
+            <div class="restaurant-info">
+                <h1>{{ restaurant.name }} - {{ restaurant.category }}</h1>
+                <h4>{{ restaurant.address }}</h4>
+                <p>{{ restaurant.phone }}</p>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="menu-items-container">
+        @for (menuItem of restaurant.menuItems; track menuItem.id) {
+        <app-detail-card [menuItem]="menuItem"></app-detail-card>
+        }
+    </div>
+</div>
+}

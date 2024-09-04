@@ -1,0 +1,30 @@
+<div class="register-container">
+    <h2>Registrar</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="register-email">Email:</label>
+            <input type="email" id="register-email" formControlName="email">
+            <div
+                *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.dirty || registerForm.get('email')?.touched)">
+                <small class="error" *ngIf="registerForm.get('email')?.errors?.['required']">
+                    O email é obrigatório.
+                </small>
+                <small class="error" *ngIf="registerForm.get('email')?.errors?.['email']">
+                    Insira um email válido.
+                </small>
+            </div>
+        </div>
+        <div>
+            <label for="register-password">Senha:</label>
+            <input type="password" id="register-password" formControlName="password">
+            <div
+                *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched)">
+                <small class="error" *ngIf="registerForm.get('password')?.errors?.['required']">
+                    A senha é obrigatória.
+                </small>
+            </div>
+        </div>
+        <button type="submit" [disabled]="registerForm.invalid">Registrar</button>
+        <a href="/login">Já está cadastrado? Login</a>
+    </form>
+</div>

@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "name": "Feijão Tropeiro",
+        "description": "Feijão misturado com farinha, bacon, linguiça, ovos e temperos mineiros.",
+        "price": 28.90,
+        "restaurantId": 1
+    },
+    {
+        "id": 2,
+        "name": "Frango com Quiabo",
+        "description": "Frango cozido com quiabo e molho de tomate, acompanha arroz e angu.",
+        "price": 32.50,
+        "restaurantId": 1
+    },
+    {
+        "id": 3,
+        "name": "Pequi com Frango",
+        "description": "Frango cozido com pequi, arroz e tutu de feijão.",
+        "price": 35.00,
+        "restaurantId": 2
+    },
+    {
+        "id": 4,
+        "name": "Pamonha",
+        "description": "Tradicional pamonha mineira, feita com milho verde e queijo.",
+        "price": 12.50,
+        "restaurantId": 2
+    },
+    {
+        "id": 5,
+        "name": "Galinhada",
+        "description": "Arroz temperado com frango, açafrão e pequi.",
+        "price": 30.00,
+        "restaurantId": 2
+    },
+    {
+        "id": 6,
+        "name": "Picadinho de Carne",
+        "description": "Carne em cubos refogada com legumes, acompanha arroz e batata frita.",
+        "price": 33.90,
+        "restaurantId": 3
+    },
+    {
+        "id": 7,
+        "name": "Costelinha de Porco",
+        "description": "Costelinha de porco assada lentamente, acompanha mandioca frita e vinagrete.",
+        "price": 39.90,
+        "restaurantId": 4
+    },
+    {
+        "id": 8,
+        "name": "Tutu à Mineira",
+        "description": "Feijão batido com farinha, bacon e linguiça, acompanha arroz, couve e ovo frito.",
+        "price": 28.50,
+        "restaurantId": 4
+    },
+    {
+        "id": 9,
+        "name": "Moqueca de Surubim",
+        "description": "Moqueca de peixe surubim com leite de coco, pimentões e tomate, acompanha arroz e pirão.",
+        "price": 45.00,
+        "restaurantId": 5
+    },
+    {
+        "id": 10,
+        "name": "Torresmo",
+        "description": "Torresmo crocante servido com limão e molho de pimenta.",
+        "price": 22.00,
+        "restaurantId": 5
+    },
+    {
+        "id": 11,
+        "name": "Canjiquinha com Costelinha",
+        "description": "Canjiquinha cremosa com costelinha de porco desfiada, acompanha couve refogada.",
+        "price": 36.50,
+        "restaurantId": 5
+    }
+]

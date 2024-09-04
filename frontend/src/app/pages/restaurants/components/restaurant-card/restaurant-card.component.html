@@ -1,0 +1,7 @@
+<div class="card" (click)="openDetails()">
+    <img mat-card-image [src]="'assets/restaurant.png'" alt="{{ restaurant().name }}" />
+    <div class="container">
+        <h4><b>{{ restaurant().name }}</b></h4>
+        <p>{{ restaurant().category }}</p>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<ngx-loading [show]="loading()" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+
+<div *ngIf="isAuthenticated()" class="header-container">
+    <app-header></app-header>
+</div>
+<router-outlet />

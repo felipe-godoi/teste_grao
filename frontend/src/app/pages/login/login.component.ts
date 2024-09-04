@@ -11,6 +11,7 @@ import { AuthService } from "../../auth/auth.service";
 import { finalize } from "rxjs";
 import { NgxLoadingModule } from "ngx-loading";
 import { LoadingService } from "../../shared/services/loading.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-login",
@@ -31,9 +32,12 @@ export class LoginComponent implements OnInit {
     }),
   });
   isLogin: WritableSignal<boolean> = signal(true);
-  loading = signal(false);
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private toastrService: ToastrService
+  ) {}
 
   ngOnInit() {
     if (this.authService.isAuthenticated()) {
@@ -55,7 +59,7 @@ export class LoginComponent implements OnInit {
 
     this.authService.login(email, password).subscribe({
       next: () => {
-        this.loading.set(false);
+        this.toastrService.success("Login efetuado com sucesso!");
         return this.router.navigate(["/restaurants"]);
       },
     });

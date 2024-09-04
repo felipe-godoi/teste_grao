@@ -1,4 +1,11 @@
-import { Body, Controller, HttpStatus, Post, Res } from "@nestjs/common";
+import {
+    Body,
+    ConflictException,
+    Controller,
+    HttpStatus,
+    Post,
+    Res,
+} from "@nestjs/common";
 import { ApiOperation, ApiResponse, ApiTags } from "@nestjs/swagger";
 import { Response } from "express";
 import { LoginDto } from "../shared/dto/login.dto";
@@ -11,8 +18,21 @@ export class AuthController {
 
     @Post("register")
     @ApiOperation({ summary: "Registrar um novo usuário" })
-    async register(@Body() registerDto: LoginDto) {
-        return this.authService.register(registerDto);
+    async register(@Body() registerDto: LoginDto, @Res() res: Response) {
+        try {
+            return await this.authService.register(registerDto);
+        } catch (err) {
+            if (err instanceof ConflictException) {
+                return res.status(HttpStatus.CONFLICT).json({
+                    message:
+                        "Esse e-mail já está em uso. Se deseja fazer login, clique em 'Login'.",
+                });
+            }
+
+            return res.status(HttpStatus.BAD_GATEWAY).json({
+                message: "Erro ao registrar o usuário. ",
+            });
+        }
     }
 
     @Post("login")

@@ -1,4 +1,8 @@
-import { Injectable, UnauthorizedException } from "@nestjs/common";
+import {
+    ConflictException,
+    Injectable,
+    UnauthorizedException,
+} from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from "typeorm";
@@ -18,7 +22,15 @@ export class AuthService {
         user.email = registerDto.email;
         await user.setPassword(registerDto.password);
 
-        this.userRepository.save(user);
+        const existingUser = await this.userRepository.findOne({
+            where: { email: user.email },
+        });
+
+        if (existingUser) {
+            throw new ConflictException();
+        }
+
+        await this.userRepository.save(user);
 
         return { email: user.email } as User;
     }

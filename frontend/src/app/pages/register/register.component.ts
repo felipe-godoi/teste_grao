@@ -8,6 +8,7 @@ import {
 } from "@angular/forms";
 import { AuthService } from "../../auth/auth.service";
 import { Router } from "@angular/router";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-register",
@@ -28,7 +29,11 @@ export class RegisterComponent implements OnInit {
     }),
   });
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private toastrService: ToastrService
+  ) {}
 
   ngOnInit() {
     if (this.authService.isAuthenticated()) {
@@ -46,6 +51,7 @@ export class RegisterComponent implements OnInit {
 
     this.authService.register(email, password).subscribe({
       next: () => {
+        this.toastrService.success("Cadastro efetuado com sucesso!");
         this.router.navigate(["/login"]);
       },
     });

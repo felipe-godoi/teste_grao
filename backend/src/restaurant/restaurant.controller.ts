@@ -6,8 +6,8 @@ import {
     ApiResponse,
     ApiTags,
 } from "@nestjs/swagger";
-import { Restaurant } from "src/shared/entities/restaurant.entity";
 import { JwtAuthGuard } from "../auth/jwt/jwt-auth.guard";
+import { Restaurant } from "../shared/entities/restaurant.entity";
 import { GetRestaurantsQueryDto } from "./dto/get-restaurants.dto";
 import { RestaurantService } from "./restaurant.service";
 

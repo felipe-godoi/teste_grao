@@ -7,6 +7,7 @@ const allRestaurants = [
     {
         id: 1,
         name: "Sabor Mineiro",
+        category: "Mineira",
         phone: "(34) 3332-5678",
         address: "Rua Governador Valadares, 456, Centro, Uberaba - MG",
         menuItems: [
@@ -29,6 +30,7 @@ const allRestaurants = [
     {
         id: 2,
         name: "Cantinho do Cerrado",
+        category: "Carnes",
         phone: "(34) 3315-9876",
         address: "Avenida Leopoldino de Oliveira, 789, Mercês, Uberaba - MG",
         menuItems: [
@@ -97,6 +99,7 @@ describe("RestaurantService", () => {
             {
                 id: 1,
                 name: "Sabor Mineiro",
+                category: "Mineira",
                 phone: "(34) 3332-5678",
                 address: "Rua Governador Valadares, 456, Centro, Uberaba - MG",
                 menuItems: [
@@ -112,6 +115,7 @@ describe("RestaurantService", () => {
             {
                 id: 2,
                 name: "Cantinho do Cerrado",
+                category: "Carnes",
                 phone: "(34) 3315-9876",
                 address:
                     "Avenida Leopoldino de Oliveira, 789, Mercês, Uberaba - MG",

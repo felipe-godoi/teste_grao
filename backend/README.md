@@ -17,7 +17,6 @@ Para executar os testes é necessário ter o node instalado e estar com o contai
 
 Com isso feito, basta executar:
 - `npm run test` para rodar os testes unitários;
-- `npm run test:e2e` para rodar os testes e2e;
 
 # Acessando a aplicação
 

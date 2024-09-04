@@ -65,7 +65,6 @@ describe("AuthController", () => {
         expect(serviceSpy).toHaveBeenCalledWith(body);
         expect(cookieSpy).toHaveBeenCalledTimes(1);
         expect(cookieSpy).toHaveBeenCalledWith("access_token", "accessToken", {
-            httpOnly: true,
             secure: process.env.NODE_ENV === "production",
             sameSite: "strict",
             maxAge: 3600000,

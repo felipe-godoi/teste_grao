@@ -8,4 +8,4 @@ Para executar basta seguir os seguintes passos:
 
 #### 1. Clonar esse repositório;
 #### 2. Rodar `npm install`;
-#### 3. Executar `ng server -o` em um terminal dentro da pasta do repositório.
+#### 3. Executar `ng serve -o` em um terminal dentro da pasta do repositório.
